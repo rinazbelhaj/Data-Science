@@ -77,9 +77,9 @@ Now he is back to our e-commerce platform to buy a few more t-shirts. His prefer
  
 As we can see, there are 282 products which matches his filters. The first page consist of 32 products and top 8 are visible in the above screenshot. But none of these matches Mr. X's preference. Lets say he was not able to find anything that matches his preference in the first page. He jumps over to the next page, again nothing that matches his preference. He had to look over 225 items before he finally finds the t-shirts that he was looking for on the 8th page.
 
- ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-3.png?raw=true "8th Page")
+ ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-3.PNG?raw=true "8th Page")
  
- **What do you thing would have caused this issue. What could have been done to prevent it ?
+ **What do you thing would have caused this issue. What could have been done to prevent it ?**
  
  
 

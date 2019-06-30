@@ -66,5 +66,20 @@ Collaborative filtering is based on the assumption that people who agreed in the
    * Tends to recommend popular items
    
  # Case Study : How to develop a recommender systems which can recommend popular item as well as new/esoteric items
+ 
+ Assume the case where a customer X logs into our e-commerce platform to buy himself a t-shirt. He has made multiple purchases on the same website before as well. He is a guy who prefers graphic t-shirts which can also be seen in his buying behaviour on the platform. Below are few products from his previous purchase through our platform.
+ 
+ ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-1.png?raw=true "Purchase History")
 
+Now he is back to our e-commerce platform to buy a few more t-shirts. His preference might or might not be same as before. He either buy a popular product which is currently in trend or he might stick to his original preference. Either ways, lets assume below is the first page to which he was redirected after applying the filters : Type - Poleras, Fit - Classic, Size - L.
+
+ ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-2.PNG?raw=true "Home Page")
+ 
+As we can see, there are 282 products which matches his filters. The first page consist of 32 products and top 8 are visible in the above screenshot. But none of these matches Mr. X's preference. Lets say he was not able to find anything that matches his preference in the first page. He jumps over to the next page, again nothing that matches his preference. He had to look over 225 items before he finally finds the t-shirts that he was looking for on the 8th page.
+
+ ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-3.PNG?raw=true "8th Page")
+ 
+ **What do you thing would have caused this issue. What could have been done to prevent it ?
+ 
+ 
 

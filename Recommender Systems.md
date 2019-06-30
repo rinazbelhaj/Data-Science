@@ -10,6 +10,9 @@ Recommendation systems use a number of different technologies. We can classify t
 1. Content Based Recommendations
 2. Collaborative Filtering
 
+
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Types.png?raw=true "Types of Recommendation Engine")
+
 ## 1. Content Based Recommendations :
 
 Content-based filtering methods are based on a description of the item and a profile of the user’s preferences. These methods are best suited to situations where there is known data on an item (name, location, description, etc.), but not on the user. Content-based recommenders treat recommendation as a user-specific classification problem and learn a classifier for the user's likes and dislikes based on product features.
@@ -61,3 +64,7 @@ Collaborative filtering is based on the assumption that people who agreed in the
    * Cannot recommend an unrated item - New items, Esoteric items
  * Popularity bias
    * Tends to recommend popular items
+   
+ # Case Study : How to develop a recommender systems which can recommend popular item as well as new/esoteric items
+
+

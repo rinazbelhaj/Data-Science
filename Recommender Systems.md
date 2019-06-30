@@ -103,7 +103,7 @@ The e-commerce platform generates the landing page based on recommendation engin
 
 Hybrid Recommender System combines collaborative filtering, content-based filtering, and other approaches . Hybrid approaches can be implemented in several ways: by making content-based and collaborative-based predictions separately and then combining them; by adding content-based capabilities to a collaborative-based approach (and vice versa); or by unifying the approaches into one model. Several studies that empirically compare the performance of the hybrid with the pure collaborative and content-based methods and demonstrated that the hybrid methods can provide more accurate recommendations than pure approaches. These methods can also be used to overcome some of the common problems in recommender systems such as cold start and the sparsity problem, as well as the knowledge engineering bottleneck in knowledge-based approaches.
 
-![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Hybrid%20Recommender%20System.jpeg?raw=true "Hybrid")
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Hybrid%20Recommender%20System.jpeg?raw=true "Hybrid Recommender")
 
 
 Some hybridization techniques include:
@@ -119,10 +119,25 @@ Some hybridization techniques include:
 
 We create the utility matrix between t-shirts and users where each cell signifies whether the given user has purchased the given t-shirt. Based on this utility matrix we can calculate any similarity measure which tells us how two similar a pair of t-shirts are based on the purchase behaviour of all the users on our platform. This generates an item-item similarity matrix which shows the similarity measure between any two t-shirts.
 
-![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/CF.png?raw=true "Item-Item CF")
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/CF.png?raw=true "Item-Item Similarity")
 
-Based on the above similarity matrix, we can rank other products with respect to the product purchased by our user Mr. X and the rank matrix will be as follows. Based on this, the landing page of user was designed by picking top items similar to the items already bought by him.
+Based on the above similarity matrix, we can rank other products with respect to the product purchased by our user Mr. X and the rank matrix will be as follows. Based on this, the landing page of user will be designed by picking top items similar to the items already bought by him.
 
-![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Similar%20Item.png?raw=true "Similarity Matrix")
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Similar%20Item.png?raw=true "Similarity Rank - Collaborative")
 
 ## Content Based Filtering for E-Commerce Platform
+
+For content based filtering, we have to identify the features of items and measure similarity as how similar a pair of items are based on the features. Since the problem at hand consist of images of t-shirts, it would be cumbersome to manually identify feature for each images. There can be N number of features like type, collar, sleeve, color, pattern etc. The easier way is to use deep learning algorithms to find similarity between two t-shirts based on their images. The best algorithm for this specific problem would be siamese network.
+
+**Siamese network** is an artificial neural network that use the same weights while working in tandem on two different input vectors to compute comparable output vectors. Uses of similarity measures where a siamese network might be used are such things as recognizing handwritten checks, automatic detection of faces in camera images, and matching queries with indexed documents. The perhaps most well-known application of siamese networks are face recognition, where known images of people are precomputed and compared to an image from a turnstile or similar.
+
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Siamese%20Network.png?raw=true "Siamese Network")
+
+The network output a score which tell us how similar a pair of t-shirt are based on their images. Based on this score, we can develop an item-item similarity matrix which shows the similarity measure between any two t-shirts.
+
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Siamese%20Similarity.PNG?raw=true "Item-Item Similarity")
+
+Based on the above similarity matrix, we can rank other products with respect to the product purchased by our user Mr. X and the rank matrix will be as follows. Based on this, the landing page of user will be designed by picking top items similar in looks to the items already bought by him.
+
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Similar%20Item%202.png?raw=true "Similarity Rank - Content Based")
+

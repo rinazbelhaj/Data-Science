@@ -71,7 +71,7 @@ Collaborative filtering is based on the assumption that people who agreed in the
  
  ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-1.png?raw=true "Purchase History")
 
-Now he is back to our e-commerce platform to buy a few more t-shirts. His preference might or might not be same as before. He either buy a popular product which is currently in trend or he might stick to his original preference. Either ways, lets assume below is the first page to which he was redirected after applying the filters : Type - Poleras, Fit - Classic, Size - L.
+Now he is back to our e-commerce platform to buy a few more t-shirts. His preference might or might not be same as before. He might either buy a popular product which is currently trending or he might stick to his original preference. Either ways, lets assume below is the first page to which he was redirected after applying the filters : Type - Poleras, Fit - Classic, Size - L.
 
  ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-2.PNG?raw=true "Home Page")
  
@@ -83,28 +83,32 @@ As we can see, there are 282 products which matches his filters. The landing pag
  
  ## Reasons behind current recommendations :
 The e-commerce platform generates the landing page based on recommendation engine. Following can be few reasons why the landing page was populated as we see in the snapshot.
- 1. Recommender system tried to push offer products ahead of others
- 2. Recommender system gave priority to popular products
+ **1. Recommender system tried to push offer products ahead of others**
+ **2. Recommender system gave priority to popular products**
  
  On the flip side, the relevant results were pushed to 8th page. It can be due to
- 1. Recommender system ignored user's historical preferences.
- 2. The user preferred item was new, hence not much information.
+ **1. Recommender system ignored user's historical preferences**
+ **2. The user preferred item was new, hence not much information**
  
  ## Possible solutions :
  **1. Redesign the system to use content based recommendation :**
  
- This might solve the problem faced by Mr. X. He will be redirected to a custom tailored landing page based on his past behaviour. But this will cause a big problem for majority of users who are looking for latest trends.AFter a point, Mr. X also might get bored seeing similar t-shirts to the ones he already has. Hence this is not a correct solution.
+ This might solve the problem faced by Mr. X. He will be redirected to a custom tailored landing page based on his past behaviour. But this will cause a big problem for majority of users who are looking for popular items. After a point, Mr. X also might get bored seeing similar t-shirts to the one he already has. Hence this is not an ideal solution.
  
  **2. Redesign the system to use hybrid recommendation system :**
  
- Hybrid recommendation system will use both collaborative filtering and content based recommendation in such a way that cons of one system is negated by the other. Using this, we will be able to provide relevant recommendations by taking into account individual preferences as well as latest trends.
+ Hybrid recommendation system will use both collaborative filtering and content based recommendation in such a way that cons of one system is negated by the other while maintaining the pros from both. Using this, we will be able to provide relevant recommendations by taking into account individual preferences as well as latest trends.
  
 ## Solution - Hybrid Recommender System :
 
-Hybrid Recommender System combines collaborative filtering, content-based filtering, and other approaches . Hybrid approaches can be implemented in several ways: by making content-based and collaborative-based predictions separately and then combining them; by adding content-based capabilities to a collaborative-based approach (and vice versa); or by unifying the approaches into one model. Several studies that empirically compare the performance of the hybrid with the pure collaborative and content-based methods and demonstrated that the hybrid methods can provide more accurate recommendations than pure approaches. These methods can also be used to overcome some of the common problems in recommender systems such as cold start and the sparsity problem, as well as the knowledge engineering bottleneck in knowledge-based approaches.
+Hybrid Recommender System combines collaborative filtering, content-based filtering, and other approaches . Hybrid approaches can be implemented in several ways: 
+* by making content-based and collaborative-based predictions separately and then combining them; 
+* by adding content-based capabilities to a collaborative-based approach (and vice versa); 
+* by unifying the approaches into one model. 
+
+Several studies that empirically compare the performance of the hybrid with the pure collaborative and content-based methods and demonstrated that the hybrid methods can provide more accurate recommendations than pure approaches. These methods can also be used to overcome some of the common problems in recommender systems such as cold start and the sparsity problem, as well as the knowledge engineering bottleneck in knowledge-based approaches.
 
 ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Hybrid%20Recommender%20System.jpeg?raw=true "Hybrid Recommender")
-
 
 Some hybridization techniques include:
 1. **Weighted :** Combining the score of different recommendation components numerically.
@@ -113,7 +117,7 @@ Some hybridization techniques include:
 4. **Feature Combination :** Features derived from different knowledge sources are combined together and given to a single recommendation algorithm.
 5. **Feature Augmentation :** Computing a feature or set of features, which is then part of the input to the next technique.
 6. **Cascade :** Recommenders are given strict priority, with the lower priority ones breaking ties in the scoring of the higher ones.
-7. **Meta-level :** One recommendation technique is applied and produces some sort of model, which is then the input used by the next technique
+7. **Meta-level :** One recommendation technique is applied and produces some sort of model, which is then used by the next technique.
 
 ### Collaborative Filtering for E-Commerce Platform
 
@@ -143,7 +147,7 @@ Based on the above similarity matrix, we can rank other products with respect to
 
 ### Hybrid Recommender for E-Commerce Platform
 
-We saw that collaborative filtering took care of popularity and latest trend while recommending a t-shirt but lacked user specific customization. Content based filtering took care of user specific preference but lacked popularity and latest trend. Our customer preference can fall into any of these two categories and hence we need to build a robust system that can satisfy all our customers thereby enhancing customer experience. Since our objective is to design the landing page with 32 different t-shirts, we can go ahead with **mixed hybridization technique** where half of our page [16 t-shirts] will be populated using collaborative filtering and remaining half [16 t-shirts] will be populated using content based recommendation engine. The wireframe design of the e-commerce site will be as follows.
+We saw that collaborative filtering took care of popularity and latest trend while recommending a t-shirt but lacked user specific customization. Content based filtering took care of user specific preference but lacked popularity and latest trend. Our customer preference can fall into any of these two categories and hence we need to build a robust system that can satisfy all types of customers thereby enhancing customer experience. Since our objective is to design the landing page with 32 different t-shirts, we can go ahead with **mixed hybridization technique** where half of our page [16 t-shirts] will be populated using collaborative filtering and remaining half [16 t-shirts] will be populated using content based recommendation engine. The wireframe design of our e-commerce site will be as follows.
 
 ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Wireframe.png?raw=true "Website Design")
 

@@ -83,12 +83,12 @@ As we can see, there are 282 products which matches his filters. The landing pag
  
  ## Reasons behind current recommendations :
 The e-commerce platform generates the landing page based on recommendation engine. Following can be few reasons why the landing page was populated as we see in the snapshot.
- **1. Recommender system tried to push offer products ahead of others**
- **2. Recommender system gave priority to popular products**
+ 1. **Recommender system tried to push offer products ahead of others**
+ 2. **Recommender system gave priority to popular products**
  
  On the flip side, the relevant results were pushed to 8th page. It can be due to
- **1. Recommender system ignored user's historical preferences**
- **2. The user preferred item was new, hence not much information**
+ 1. **Recommender system ignored user's historical preferences**
+ 2. **The user preferred item was new, hence not much information**
  
  ## Possible solutions :
  **1. Redesign the system to use content based recommendation :**

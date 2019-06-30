@@ -75,11 +75,25 @@ Now he is back to our e-commerce platform to buy a few more t-shirts. His prefer
 
  ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-2.PNG?raw=true "Home Page")
  
-As we can see, there are 282 products which matches his filters. The first page consist of 32 products and top 8 are visible in the above screenshot. But none of these matches Mr. X's preference. Lets say he was not able to find anything that matches his preference in the first page. He jumps over to the next page, again nothing that matches his preference. He had to look over 225 items before he finally finds the t-shirts that he was looking for on the 8th page.
+As we can see, there are 282 products which matches his filters. The landing page consist of 32 products and top 8 are visible in the above screenshot. But none of these matches Mr. X's preference. Lets say he was not able to find anything that matches his preference in the first page. He jumps over to the next page, again nothing that matches his preference. He had to look over 225 items before he finally finds the t-shirts that he was looking for on the 8th page. This can result in unhappy customer and thereby leads to customer attrition.
 
  ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-3.PNG?raw=true "8th Page")
  
  **What do you thing would have caused this issue. What could have been done to prevent it ?**
  
+ ## Reasons behind current recommendations:
+The e-commerce platform generates the landing page based on recommendation engine. Following can be few reasons why the landing page was populated as we see in the snapshot.
+ 1. Recommender system tried to push offer products ahead of others
+ 2. Recommender system gave priority to popular products
+ 
+ On the flip side, the relevant results were pushed to 8th page. It can be due to
+ 1. Recommender system ignored user's historical preferences.
+ 2. The user preferred item was new, hence not much information.
+ 
+ ## Possible solutions:
+ 1. Redesign the system to use content based recommendation :
+    This might solve the problem faced by Mr. X. He will be redirected to a custom tailored landing page based on his past behaviour. But this will cause a big problem for majority of users who are looking for latest trends. 
+ 2. Redesign the system to use hybrid recommendation system :
+    Hybrid recommendation system will use both collaborative filtering and content based recommendation in such a way that cons of one system is negated by the other.
  
 

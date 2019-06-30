@@ -103,6 +103,9 @@ The e-commerce platform generates the landing page based on recommendation engin
 
 Hybrid Recommender System combines collaborative filtering, content-based filtering, and other approaches . Hybrid approaches can be implemented in several ways: by making content-based and collaborative-based predictions separately and then combining them; by adding content-based capabilities to a collaborative-based approach (and vice versa); or by unifying the approaches into one model. Several studies that empirically compare the performance of the hybrid with the pure collaborative and content-based methods and demonstrated that the hybrid methods can provide more accurate recommendations than pure approaches. These methods can also be used to overcome some of the common problems in recommender systems such as cold start and the sparsity problem, as well as the knowledge engineering bottleneck in knowledge-based approaches.
 
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Hybrid%20Recommender%20System.jpeg?raw=true "Hybrid")
+
+
 Some hybridization techniques include:
 1. **Weighted :** Combining the score of different recommendation components numerically.
 2. **Switching :** Choosing among recommendation components and applying the selected one.
@@ -111,3 +114,15 @@ Some hybridization techniques include:
 5. **Feature Augmentation :** Computing a feature or set of features, which is then part of the input to the next technique.
 6. **Cascade :** Recommenders are given strict priority, with the lower priority ones breaking ties in the scoring of the higher ones.
 7. **Meta-level :** One recommendation technique is applied and produces some sort of model, which is then the input used by the next technique
+
+## Collaborative Filtering for E-Commerce Platform
+
+We create the utility matrix between t-shirts and users where each cell signifies whether the given user has purchased the given t-shirt. Based on this utility matrix we can calculate any similarity measure which tells us how two similar a pair of t-shirts are based on the purchase behaviour of all the users on our platform. This generates an item-item similarity matrix which shows the similarity measure between any two t-shirts.
+
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/CF.png?raw=true "Item-Item CF")
+
+Based on the above similarity matrix, we can rank other products with respect to the product purchased by our user Mr. X and the rank matrix will be as follows. Based on this, the landing page of user was designed by picking top items similar to the items already bought by him.
+
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Similar%20Item.png?raw=true "Similarity Matrix")
+
+## Content Based Filtering for E-Commerce Platform

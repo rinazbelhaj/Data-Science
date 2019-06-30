@@ -149,6 +149,6 @@ We saw that collaborative filtering took care of popularity and latest trend whi
 
 ### Landing page based on hybrid recommender
 
-Once the hybrid recommender system is in place, the landing page will be customized to each user based on his past preferences as well as latest trend in the market. A sample snapshot of the landing page is shown below.
+Once the hybrid recommender system is in place, the landing page will be customized to each user based on his past preferences, latest trend as well as new products in the market. A sample snapshot of the landing page is shown below.
 
 ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-4.png?raw=true "Hybrid Recommender Results")

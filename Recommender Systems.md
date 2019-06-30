@@ -115,7 +115,7 @@ Some hybridization techniques include:
 6. **Cascade :** Recommenders are given strict priority, with the lower priority ones breaking ties in the scoring of the higher ones.
 7. **Meta-level :** One recommendation technique is applied and produces some sort of model, which is then the input used by the next technique
 
-## Collaborative Filtering for E-Commerce Platform
+### Collaborative Filtering for E-Commerce Platform
 
 We create the utility matrix between t-shirts and users where each cell signifies whether the given user has purchased the given t-shirt. Based on this utility matrix we can calculate any similarity measure which tells us how two similar a pair of t-shirts are based on the purchase behaviour of all the users on our platform. This generates an item-item similarity matrix which shows the similarity measure between any two t-shirts.
 
@@ -125,7 +125,7 @@ Based on the above similarity matrix, we can rank other products with respect to
 
 ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Similar%20Item.png?raw=true "Similarity Rank - Collaborative")
 
-## Content Based Filtering for E-Commerce Platform
+### Content Based Filtering for E-Commerce Platform
 
 For content based filtering, we have to identify the features of items and measure similarity as how similar a pair of items are based on the features. Since the problem at hand consist of images of t-shirts, it would be cumbersome to manually identify feature for each images. There can be N number of features like type, collar, sleeve, color, pattern etc. The easier way is to use deep learning algorithms to find similarity between two t-shirts based on their images. The best algorithm for this specific problem would be siamese network.
 
@@ -137,7 +137,18 @@ The network output a score which tell us how similar a pair of t-shirt are based
 
 ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Siamese%20Similarity.PNG?raw=true "Item-Item Similarity")
 
-Based on the above similarity matrix, we can rank other products with respect to the product purchased by our user Mr. X and the rank matrix will be as follows. Based on this, the landing page of user will be designed by picking top items similar in looks to the items already bought by him.
+Based on the above similarity matrix, we can rank other products with respect to the product purchased by our user Mr. X and the rank matrix will be as follows. Based on this, the landing page of user will be designed by picking top items similar in looks to the items already bought by him. A very important point to note in case of textile is that we need to filter out products with very high similarity before ranking them. This is to avoid getting extremely similar items since nobody would like to have a collection of exactly similar t-shirts in their wardrobe. This cutoff threshold should be identified by manually inspecting some products with very high similarity score. 
 
 ![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Similar%20Item%202.png?raw=true "Similarity Rank - Content Based")
 
+### Hybrid Recommender for E-Commerce Platform
+
+We saw that collaborative filtering took care of popularity and latest trend while recommending a t-shirt but lacked user specific customization. Content based filtering took care of user specific preference but lacked popularity and latest trend. Our customer preference can fall into any of these two categories and hence we need to build a robust system that can satisfy all our customers thereby enhancing customer experience. Since our objective is to design the landing page with 32 different t-shirts, we can go ahead with **mixed hybridization technique** where half of our page [16 t-shirts] will be populated using collaborative filtering and remaining half [16 t-shirts] will be populated using content based recommendation engine. The wireframe design of the e-commerce site will be as follows.
+
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/Wireframe.png?raw=true "Website Design")
+
+### Landing page based on hybrid recommender
+
+Once the hybrid recommender system is in place, the landing page will be customized to each user based on his past preferences as well as latest trend in the market. A sample snapshot of the landing page is shown below.
+
+![alt+text](https://github.com/rinazbelhaj/Data-Science/blob/master/Images/FB-4.png?raw=true "Hybrid Recommender Results")

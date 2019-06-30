@@ -81,7 +81,7 @@ As we can see, there are 282 products which matches his filters. The landing pag
  
  **What do you thing would have caused this issue. What could have been done to prevent it ?**
  
- ## Reasons behind current recommendations:
+ ## Reasons behind current recommendations :
 The e-commerce platform generates the landing page based on recommendation engine. Following can be few reasons why the landing page was populated as we see in the snapshot.
  1. Recommender system tried to push offer products ahead of others
  2. Recommender system gave priority to popular products
@@ -90,10 +90,24 @@ The e-commerce platform generates the landing page based on recommendation engin
  1. Recommender system ignored user's historical preferences.
  2. The user preferred item was new, hence not much information.
  
- ## Possible solutions:
- 1. Redesign the system to use content based recommendation :
-    This might solve the problem faced by Mr. X. He will be redirected to a custom tailored landing page based on his past behaviour. But this will cause a big problem for majority of users who are looking for latest trends. 
- 2. Redesign the system to use hybrid recommendation system :
-    Hybrid recommendation system will use both collaborative filtering and content based recommendation in such a way that cons of one system is negated by the other.
+ ## Possible solutions :
+ **1. Redesign the system to use content based recommendation :**
  
+ This might solve the problem faced by Mr. X. He will be redirected to a custom tailored landing page based on his past behaviour. But this will cause a big problem for majority of users who are looking for latest trends.AFter a point, Mr. X also might get bored seeing similar t-shirts to the ones he already has. Hence this is not a correct solution.
+ 
+ **2. Redesign the system to use hybrid recommendation system :**
+ 
+ Hybrid recommendation system will use both collaborative filtering and content based recommendation in such a way that cons of one system is negated by the other. Using this, we will be able to provide relevant recommendations by taking into account individual preferences as well as latest trends.
+ 
+## Solution - Hybrid Recommender System :
 
+Hybrid Recommender System combines collaborative filtering, content-based filtering, and other approaches . Hybrid approaches can be implemented in several ways: by making content-based and collaborative-based predictions separately and then combining them; by adding content-based capabilities to a collaborative-based approach (and vice versa); or by unifying the approaches into one model. Several studies that empirically compare the performance of the hybrid with the pure collaborative and content-based methods and demonstrated that the hybrid methods can provide more accurate recommendations than pure approaches. These methods can also be used to overcome some of the common problems in recommender systems such as cold start and the sparsity problem, as well as the knowledge engineering bottleneck in knowledge-based approaches.
+
+Some hybridization techniques include:
+1. **Weighted :** Combining the score of different recommendation components numerically.
+2. **Switching :** Choosing among recommendation components and applying the selected one.
+3. **Mixed :** Recommendations from different recommenders are presented together to give the recommendation.
+4. **Feature Combination :** Features derived from different knowledge sources are combined together and given to a single recommendation algorithm.
+5. **Feature Augmentation :** Computing a feature or set of features, which is then part of the input to the next technique.
+6. **Cascade :** Recommenders are given strict priority, with the lower priority ones breaking ties in the scoring of the higher ones.
+7. **Meta-level :** One recommendation technique is applied and produces some sort of model, which is then the input used by the next technique
